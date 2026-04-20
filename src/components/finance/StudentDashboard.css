@@ -1,0 +1,128 @@
+.student-page {
+  background: #f4f4f4;
+}
+
+.student-card {
+  border-radius: 15px;
+}
+
+.avatar-box {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  
+}
+
+.balance-box {
+  background: #dfffe0;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.group-card,
+.balance-card,
+.payments-card {
+  border-radius: 15px;
+}
+
+.month-box {
+  border: 2px solid green;
+}
+
+.group-card,
+.balance-card,
+.payments-card {
+  border-radius: 12px;
+  background: #fff;
+}
+
+.nav-tabs .nav-link {
+  color: #777;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid #ff6b00;
+  color: #ff6b00;
+}
+
+.group-info {
+  background: #fafafa;
+}
+
+
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.chop-etish{
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.student-card {
+  border-radius: 12px;
+  background: #fff;
+}
+
+.avatar-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.balance-box {
+  display: inline-block;
+  background: #28a745;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-actions span {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.eslatma {
+  border-left: 4px solid #0d6efd;
+  resize: none;
+}

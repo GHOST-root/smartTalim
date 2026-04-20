@@ -1,0 +1,140 @@
+/* imtihonlid.css */
+.settings-card-wrapper {
+  padding: 10px 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  padding: 32px;
+  border: 1px solid #f1f5f9;
+}
+
+.settings-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.settings-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.loading-text {
+  color: #64748b;
+  font-size: 15px;
+  padding: 20px 0;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Maxsus (Custom) Checkbox dizayni */
+.custom-checkbox-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.custom-checkbox-item:hover input ~ .checkbox-box {
+  border-color: #94a3b8;
+}
+
+/* Belgilangandagi holati (Ko'k rang) */
+.custom-checkbox-item input:checked ~ .checkbox-box {
+  background-color: #ff7a00;
+  border-color: #fa973b;
+}
+
+/* HTML-siz CSS yordamida "Pichka" (Checkmark) chizish */
+.custom-checkbox-item input:checked ~ .checkbox-box:after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.checkbox-label {
+  font-size: 15px;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Saqlash tugmasi */
+.save-settings-btn {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+}
+
+.save-settings-btn:hover {
+  background-color: #ec780a;
+}
+
+.save-settings-btn:active {
+  transform: scale(0.98);
+}
+
+.save-settings-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 14px;
+}

@@ -1,0 +1,263 @@
+/* styles/holidays.css */
+.holidays-wrapper {
+  padding: 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+.holidays-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.holidays-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.premium-add-btn {
+  background-color: #f97316; /* Orange */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.premium-add-btn:hover {
+  background-color: #ea580c;
+}
+
+.info-text {
+  color: #f97316;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+/* Maxsus Jadval Dizayni */
+.table-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f8fafc;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  user-select: none;
+}
+
+.sortable-th {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sortable-th:hover {
+  background-color: #f1f5f9;
+}
+
+.sort-icon {
+  margin-left: 6px;
+  color: #94a3b8;
+  vertical-align: middle;
+}
+
+.sortable-th.active .sort-icon {
+  color: #f97316; /* Faol saralash rangi */
+}
+
+.custom-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.custom-table tr:last-child td {
+  border-bottom: none;
+}
+
+.custom-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.empty-row {
+  text-align: center;
+  color: #94a3b8 !important;
+  padding: 40px !important;
+}
+
+/* Harakat tugmalari */
+.action-icon-btn {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.action-icon-btn.edit:hover { background-color: #fff7ed; color: #f97316; }
+.action-icon-btn.delete:hover { background-color: #fef2f2; color: #ef4444; }
+
+/* MODAL DIZAYNI */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  opacity: 0; visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1; visibility: visible;
+}
+
+.custom-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active .custom-modal {
+  transform: scale(1);
+}
+
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.close-btn {
+  background: none; border: none; color: #94a3b8; cursor: pointer;
+}
+
+.close-btn:hover { color: #ef4444; }
+
+.modal-body {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.custom-input {
+  width: 100%; height: 42px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.custom-input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+/* Orange Checkbox */
+.custom-orange-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 12px;
+}
+
+.custom-orange-checkbox input {
+  position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;
+}
+
+.orange-checkbox-box {
+  width: 20px; height: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box {
+  background-color: #f97316; border-color: #f97316;
+}
+
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box:after {
+  content: ""; width: 5px; height: 10px;
+  border: solid white; border-width: 0 2px 2px 0;
+  transform: rotate(45deg); margin-bottom: 2px;
+}
+
+.checkbox-label { font-size: 14px; color: #334155; }
+
+.modal-footer {
+  display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px;
+}
+
+.cancel-btn {
+  padding: 10px 20px; background: #f1f5f9; color: #334155; border: none; border-radius: 8px; cursor: pointer; font-weight: 500;
+}
+.cancel-btn:hover { background: #e2e8f0; }
+
+.save-btn {
+  padding: 10px 24px; background: #f97316; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+.save-btn:hover { background: #ea580c; }

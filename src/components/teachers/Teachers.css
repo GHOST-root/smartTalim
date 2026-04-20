@@ -1,0 +1,873 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* border: 0.1px solid red; */
+}
+
+.layout {
+  display: flex;
+  /* height: 100vh; */
+}
+
+/* CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* =======================================
+   TEACHERS PAGE HEADER (Yangi va Xavfsiz)
+======================================= */
+.teachers-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.count-badge {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  padding: 5px 12px;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 🌟 QIDIRUV PANELI 🌟 */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  height: 40px;
+  padding: 0 12px;
+  width: 260px;
+  transition: border-color 0.2s;
+}
+
+.search-wrapper:focus-within {
+  border-color: #ffb703;
+}
+
+.search-icon {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+  padding: 0;
+}
+
+/* 🌟 IMPORT TUGMASI 🌟 */
+.btn-import {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #ffb703; /* Rasmdagidek to'q sariq hoshiya */
+  color: #ffb703;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-import:hover {
+  background-color: #fff9eb;
+}
+
+/* 🌟 YANGISINI QO'SHISH TUGMASI 🌟 */
+.btn-add-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 20px;
+  background-color: #ffb703;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add-new:hover {
+  background-color: #e5a400;
+}
+
+/* TABLE LIST */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  /* ⚠️ ASOSIY YECHIM: Eng oxirgi qatordagi menyu bemalol pastga qarab ochilishi uchun joy qoldiramiz */
+  padding-bottom: 120px; 
+  min-height: 100vh;
+}
+
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:hover {
+  background-color: #fafafa;
+}
+
+.col-name { flex: 2; cursor: pointer; color: #333; }
+.col-phone { flex: 1; color: #0056b3; }
+.col-group { flex: 1; color: #666; }
+.col-action {
+  width: 50px; 
+  position: relative; 
+  text-align: right; 
+}
+
+.menu-trigger {
+  cursor: pointer;
+  color: #ccc;
+  padding: 5px;
+}
+
+.context-menu {
+  position: absolute;
+  right: 25px; /* Uch nuqtani yopib qo'ymasligi uchun biroz chaproqqa suramiz */
+  top: 25px; /* Uch nuqtadan sal pastroqdan ochiladi */
+  background: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Ekranda yaqqol ajralib turishi uchun soya qalinlashtirildi */
+  border-radius: 8px;
+  width: 180px;
+  /* ⚠️ ASOSIY YECHIM: Eng ustki qatlamga (hamma narsadan balandga) olib chiqamiz */
+  z-index: 99999 !important; 
+  text-align: left;
+  overflow: hidden;
+}
+
+.context-menu div {
+  padding: 12px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+}
+
+.context-menu div:hover { background: #f9f9f9; }
+.text-orange { color: #F58634; }
+.text-green { color: #28a745; }
+.text-red { color: #dc3545; }
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+/* DRAWER (RIGHT SIDE FORM) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0, 0, 0);
+  z-index: 999;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 420px;
+  background: #fff;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from { right: -420px; }
+  to { right: 0; }
+}
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;                 /* top:0 left:0 right:0 bottom:0 */
+  background: rgba(0,0,0,0.45); 
+  z-index: 200;
+}
+
+.drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-x {
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.drawer-body {
+  padding: 25px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff !important;
+}
+
+/* INPUT STYLES */
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+input[type="text"], input[type="date"], .sms-area {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  padding-right: 10px;
+}
+
+.input-wrapper input {
+  border: none;
+  background: transparent;
+}
+
+.prefix {
+  padding-left: 12px;
+  color: #333;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.col { flex: 1; }
+
+.radio-group { display: flex; gap: 20px; margin-top: 10px; }
+.radio-group label { margin-top: 0; font-weight: normal; display: flex; align-items: center; gap: 5px; cursor: pointer;}
+
+.file-box {
+  display: flex;
+}
+
+.file-box input[type="text"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.browse-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.save-btn {
+  background-color: #F58634;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ERROR STATES */
+.error-border, .error-border input {
+  border-color: red !important;
+}
+.error-text { color: red; }
+
+/* EYE ICON */
+.eye-icon { color: #999; cursor: pointer; }
+
+/* MODAL (DELETE) */
+.modal-bg {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.btn-cancel {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* PROFILE PAGE STYLES */
+.profile-page { padding-top: 0; }
+.profile-header h1 { margin-bottom: 20px; font-size: 22px; }
+
+.tabs { border-bottom: 1px solid #eee; margin-bottom: 20px; }
+.tab {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #999;
+  border-bottom: 3px solid transparent;
+}
+.tab.active { color: #F58634; border-bottom-color: #F58634; }
+
+.profile-grid { display: flex; gap: 20px; align-items: flex-start; }
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex: 1;
+  position: relative;
+}
+
+/* Profile Card */
+.profile-info-card { text-align: center; }
+.card-actions { position: absolute; top: 15px; right: 15px; display: flex; flex-direction: column; gap: 10px; }
+.big-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+.info-list { text-align: left; margin-top: 15px; }
+.info-list p { margin: 5px 0; font-size: 14px; color: #555; }
+.phone-text { color: #0056b3; }
+.tags { margin-top: 10px; }
+.pill { padding: 3px 12px; border-radius: 12px; font-size: 11px; }
+.orange-pill { border: 1px solid #F58634; color: #F58634; }
+.red-pill { border: 1px solid red; color: red; }
+
+/* Group List Card */
+.group-list-item {
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.group-badge { background: #e0e0e0; padding: 2px 5px; font-size: 11px; border-radius: 3px; }
+.orange-count { background: #F58634; color: white; border-radius: 4px; padding: 2px 6px; font-size: 12px;}
+
+/* Detail Card */
+.group-detail-card h2 { margin: 10px 0; font-size: 18px; }
+.btn-outline {
+  margin-top: 15px;
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  cursor: pointer;
+  float: right;
+  font-size: 12px;
+}
+.st-row { font-size: 13px; margin-bottom: 5px; display: flex; justify-content: space-between; color: #555; }
+
+/* SALARY TABLE */
+.salary-total { background: #f9f9f9; padding: 15px; margin-bottom: 10px; border-radius: 4px; font-weight: bold; }
+.salary-table { width: 100%; border-collapse: collapse; background: white; }
+.salary-table th { background: #f5f5f5; padding: 12px; text-align: left; font-size: 12px; color: #666; font-weight: bold; }
+.salary-table td { border-bottom: 1px solid #eee; }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  animation: fadeIn 0.3s;
+  z-index: 500;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.content-container {
+  display: block;
+  min-height: 100vh; /* Faqat asosiy kontentni saqlaymiz */
+}
+
+/* CONTENT AREA (Sidebar olib tashlandi, bu asosiy maydon) */
+.content {
+  flex: 1;
+  padding: 30px;
+  max-width: 1200px; /* Kattaroq ekranlar uchun cheklov */
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.badge {
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.btn-orange {
+  background-color: #F58634;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* TABLE LIST */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding-bottom: 5px; /* Pastki chegara uchun */
+}
+
+/* ASOSIY USTUN SARLAVHALARI */
+.table-header-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f7f7f7; /* Yengil fonga o'xshatish */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+  background-color: #fafafa;
+}
+
+/* USTUN KENGALIKLARI */
+.col-name { flex: 2; cursor: pointer; color: #333; }
+.col-phone { flex: 1.5; color: #0056b3; }
+.col-group { flex: 1.5; color: #666; }
+.col-action { width: 50px; position: relative; text-align: right; }
+
+
+/* DRAWER QISMIDA PAROL QO'SHISH FUNKSIYASI */
+.password-toggle-text {
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.password-input-field {
+    margin-bottom: 10px; /* Parol inputi uchun pastki bo'shliq */
+}
+
+/* FILE INPUT TUG'IRLASH */
+.file-box {
+  display: flex;
+  align-items: stretch; /* Barcha elementlarni bir xil balandlikka cho'zish */
+}
+
+.file-box input[type="text"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  height: 40px; /* Standart balandlikka keltirish */
+}
+
+.browse-btn {
+  /* Browse tugmasini input balandligiga moslash */
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: none;
+  padding: 0 15px;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: 0;
+  font-size: 13px;
+  height: 40px; /* Standart balandlikka keltirish */
+}
+
+/* PROFILE PAGE STYLES */
+
+.back-link {
+  color: #666;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.back-link i {
+    margin-right: 8px;
+}
+
+.profile-page { padding-top: 0; }
+/* ... (tabs va grid avvalgidek) ... */
+
+/* PROFILE INFO CARD (Yangi dizayn) */
+.profile-info-card { text-align: center; }
+
+.card-actions { 
+    position: absolute; top: 15px; right: 15px; 
+    display: flex; flex-direction: column; gap: 10px; 
+}
+
+.rounded-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.text-green.rounded-icon { border-color: #28a745; color: #28a745; }
+.text-orange.rounded-icon { border-color: #F58634; color: #F58634; }
+
+
+.info-list { text-align: left; margin-top: 15px; }
+
+.label-title {
+    margin: 15px 0 5px 0;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+
+/* ... Avvalgi CSS stillar ... */
+
+/* INPUT STYLES QISMIGA QO'SHILADI/O'ZGARTIRILADI */
+
+/* Ko'z belgisini to'g'irlash */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  padding-right: 0; /* padding-right ni 0 ga o'tkazish */
+}
+
+.input-wrapper input {
+  border: none;
+  background: transparent;
+  flex-grow: 1; /* Input bo'sh joyni egallashi uchun */
+  padding: 10px 12px; /* Qaytadan padding qo'shish */
+}
+
+.eye-icon { 
+  color: #999; 
+  cursor: pointer; 
+  padding: 0 12px; /* Ikona atrofida joy qoldirish */
+}
+
+
+/* PROFILE INFO CARD ichidagi sarlavhalarni to'g'irlash */
+.info-list { text-align: left; margin-top: 15px; }
+
+.label-title {
+    /* Rasmdagidek bo'shliqlar */
+    margin: 15px 0 5px 0; 
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tags { 
+    margin-top: -10px; /* Rollari/Filiallar sarlavhasiga yaqin turishi uchun */
+    margin-bottom: 15px; /* Keyingi elementdan uzoqlashtirish */
+}
+
+/* ... Qolgan CSS stillar o'zgarishsiz qoladi ... */
+
+.btn-orange {
+  border-radius: 4px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 190px;
+}
+
+.plas {
+  font-size: 25px;
+
+}
+
+/* Maxsus Loader Overlay */
+.special-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-box {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.spinner-ring {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #ff6b00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.password-area p {
+  color: #ff6b00;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+/* Drawer Header dizayni */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.drawer-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* X tugmasi dizayni */
+.close-drawer-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 5px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.close-drawer-btn:hover {
+  color: #ff6b00;
+  transform: scale(1.1);
+}
+
+/* Drawer Body (Sichqoncha bilan scroll qilish uchun) */
+.drawer-body {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100% - 70px);
+}
+
+/* Loader dizayni (oldingi qismdan) */
+.special-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Jinsi tanlash bo'limi */
+.gender-selection {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  margin-top: -35px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #555;
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff6b00; /* To'q sariq rangli radio */
+}
+
+/* Xato bo'lganda qizil hoshiya */
+.error-border {
+  border: 1.5px solid #ff4d4f !important;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+/* Drawer Header dagi X tugmasi */
+.close-drawer-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-drawer-btn:hover {
+  color: #ff6b00;
+}

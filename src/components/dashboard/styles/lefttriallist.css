@@ -1,0 +1,145 @@
+*{
+    /* border: 0.1px solid red; */
+}
+
+/* =======================================
+   FILTRLAR PANELI DIZAYNI
+======================================= */
+.custom-filter-grid {
+  display: flex;
+  flex-wrap: wrap; /* Sig'masa pastga tushirish */
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f8f9fa; /* Sal kulrang, ajralib turadigan fon */
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Barcha Input va Selectlar uchun umumiy qoida (40px qoidamiz) */
+/* Barcha Input va Selectlar uchun (faqat o'ziga kerakli joyni oladi) */
+.custom-filter-input,
+.custom-filter-select {
+  height: 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #374151;
+  outline: none;
+  background-color: #fff;
+  transition: border-color 0.2s;
+  /* 🌟 flex: 1 olib tashlandi, endi butun ekranga cho'zilmaydi */
+  width: auto; 
+  min-width: 140px; /* Haddan tashqari kichrayib ketmasligi uchun */
+}
+
+/* Qidiruv Inputi uchun aniq va qat'iy o'lcham */
+.filter-search {
+  /* 🌟 flex: 2 olib tashlandi, o'rniga aniq kenglik berildi */
+  width: 250px; 
+  background-color: white;
+}
+
+.custom-filter-input:focus,
+.custom-filter-select:focus {
+  border-color: #ffb703;
+}
+
+.btn-filter-primary {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #0ea5e9; /* Rasmdagi original havorang */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-filter-primary:hover {
+  background-color: #0284c7;
+}
+
+.btn-filter-reset:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Sana inputlari faqat o'ziga kerakli joyni oladi va cho'zilmaydi */
+.date-input {
+    height: 40px !important;
+  width: 150px !important;
+  min-width: 150px !important;
+  flex: none !important; /* Bo'sh joyni egallashiga ruxsat bermaymiz */
+}
+
+/* 🌟 QIDIRUV QUTISI (Ikonka va Input markazda turishi uchun) 🌟 */
+.search-wrapper.filter-search {
+  display: flex;
+  align-items: center; /* Ikonka va yozuvni vertikal markazlashtirish */
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  height: 40px; /* Boshqa inputlar bilan bir xil balandlik */
+  padding: 0 12px;
+  width: 250px; 
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.search-wrapper.filter-search:focus-within {
+  border-color: #ffb703;
+}
+
+.search-icon {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border: none !important;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 13px;
+  padding: 0;
+}
+
+/* 🌟 TUGMALAR BLOKI (Pastga tushib ketmasligi uchun) 🌟 */
+/* 🌟 TUGMALAR BLOKI VA QAT'IY TEKISLASH 🌟 */
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  margin: 0 !important; /* Begona bo'shliqlarni o'ldiramiz */
+  padding: 0 !important;
+}
+
+.btn-filter-primary,
+.btn-filter-reset {
+  margin: 0 !important; /* Boshqa fayldan kelayotgan marginni kesib tashlaymiz */
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-filter-reset{
+    border: none;
+    background: transparent;
+}
+
+/* Reset ikonkasini ham to'liq o'rtaga olish */
+.btn-filter-reset i {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1;
+}

@@ -1,0 +1,36 @@
+.filter-grid-2{
+  display:grid;
+
+  /* sig‘gani yonma-yon, qolganlari pastga */
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+
+  gap:10px;
+  align-items:center;
+}
+
+/* search kengroq */
+.filter-grid-2 .wide{
+  min-width:260px;
+}
+
+/* input + select stil */
+.filter-grid-2 input,
+.filter-grid-2 select{
+  width:100%;
+  height:40px !important;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:13px;
+  background:#fff;
+  outline:none;
+}
+
+.filter-grid-2 input:focus,
+.filter-grid-2 select:focus{
+  border-color:#3B82F6;
+}
+
+.dropdwn{
+  padding: 10px;
+}

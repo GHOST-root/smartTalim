@@ -1,0 +1,219 @@
+/* arxiv.css */
+.arxiv-wrapper {
+  padding: 20px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+}
+
+.arxiv-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  border: 1px solid #f1f5f9;
+}
+
+/* Header */
+.arxiv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.arxiv-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.arxiv-count {
+  color: #64748b;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Inputs & Selects (Qat'iy 40px) */
+.custom-input, 
+.custom-select {
+  height: 40px;
+  width: 100%;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.custom-input:focus, 
+.custom-select:focus {
+  border-color: #f97316; /* Orange focus */
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Tugmalar (Qat'iy 40px) */
+.actions-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn-action {
+  height: 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #4b5563;
+}
+.btn-outline:hover { background: #f8fafc; border-color: #94a3b8; }
+
+.btn-danger-custom {
+  background: #ef4444; /* Qizil */
+  color: white;
+}
+.btn-danger-custom:hover:not(:disabled) { background: #dc2626; }
+
+.btn-success-custom {
+  background: #10b981; /* Yashil (Tiklash uchun) */
+  color: white;
+}
+.btn-success-custom:hover:not(:disabled) { background: #059669; }
+
+/* Jadval Dizayni */
+.arxiv-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.arxiv-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.arxiv-table th {
+  background: #f8fafc;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.arxiv-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.arxiv-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+
+/* Orange Checkbox */
+.custom-orange-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+}
+
+.custom-orange-checkbox input {
+  position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;
+}
+
+.orange-checkbox-box {
+  width: 18px; height: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box {
+  background-color: #f97316; border-color: #f97316;
+}
+
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box:after {
+  content: ""; width: 4px; height: 8px;
+  border: solid white; border-width: 0 2px 2px 0;
+  transform: rotate(45deg); margin-bottom: 1px;
+}
+
+/* Rollar uchun maxsus badge */
+.badge-role {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #4b5563;
+}
+.badge-role.student { background: #e0f2fe; color: #0284c7; }
+.badge-role.teacher { background: #fef3c7; color: #d97706; }
+
+/* Bildirishnoma (Toast) */
+.toast-msg {
+  position: fixed; top: 20px; right: 20px;
+  background: #10b981; color: white;
+  padding: 12px 20px; border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-size: 14px; font-weight: 500;
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 992px) {
+  .filters-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+}

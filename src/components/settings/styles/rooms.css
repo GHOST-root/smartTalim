@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.rooms-dashboard {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    padding: 24px; /* Standart chekka bo'shliqlar */
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+/* =======================================
+   HEADER VA TUGMA
+======================================= */
+.premium-add-btn {
+    background: #f97316 !important; /* To'q sariq */
+    color: white !important;
+    border: none !important;
+    padding: 0 20px !important;
+    height: 40px !important; /* Standart 40px o'lcham */
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: background-color 0.2s !important;
+    cursor: pointer !important;
+}
+
+.premium-add-btn:hover {
+    background: #ea580c !important; /* Hover effekti ancha sokinlashdi */
+}
+
+/* =======================================
+   STATISTIKA KARTALARI
+======================================= */
+.stats-mini-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #e2e8f0; /* Soya o'rniga aniq chegara */
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box.orange { background: #fff7ed; color: #f97316; }
+.icon-box.blue { background: #eff6ff; color: #3b82f6; }
+.icon-box.green { background: #f0fdf4; color: #22c55e; }
+
+.stats-info p {
+    margin: 0 0 4px 0;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stats-info h4 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* =======================================
+   XONALAR JADVALI (GRID)
+======================================= */
+.premium-room-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease;
+    /* 🌟 Eskirgan va xunuk hover shadow/transform olib tashlandi */
+}
+
+.premium-room-card:hover {
+    border-color: #cbd5e1;
+}
+
+/* 🌟 Katta harflar xatosi to'g'irlandi (text-transform olib tashlandi) */
+.room-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.room-capacity {
+    color: #64748b;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 🌟 Tahrirlash va O'chirish tugmalari qatori to'g'irlandi */
+.room-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.action-btn {
+    flex: 1; /* Ikkala tugma ham bir xil joy oladi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn.edit:hover {
+    background: #f8fafc;
+    color: #3b82f6;
+    border-color: #bfdbfe;
+}
+
+.action-btn.delete:hover {
+    background: #fef2f2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.status-badge {
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+/* =======================================
+   YON PANEL (MODAL) TO'G'RILANDI
+======================================= */
+.side-panel-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4); /* Oyna orqasi to'g'ri xiralashadi */
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.side-panel-overlay.active { 
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    background: white;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.05);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel.show { 
+    transform: translateX(0); 
+}
+
+/* 🌟 Panel Sarlavhasi */
+.panel-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.close-x-btn {
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.close-x-btn:hover {
+    color: #ef4444;
+}
+
+/* 🌟 Modal ichidagi formalar (40px standart!) */
+.panel-body {
+    padding: 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.panel-body .form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 6px;
+    text-transform: none; /* UPPERCASE OLIB TASHLANDI */
+}
+
+.panel-body .custom-input {
+    width: 100%;
+    height: 40px !important; /* Standart */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+.panel-body .custom-input:focus {
+    border-color: #f97316;
+    background-color: #fff;
+    outline: none;
+}
+
+.save-btn {
+    width: 100%;
+    height: 40px;
+    background: #f97316;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background: #ea580c;
+}

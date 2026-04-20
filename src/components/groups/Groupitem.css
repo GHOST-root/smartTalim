@@ -1,0 +1,100 @@
+/* ========== TOZA VA ANIQLASHTIRILGAN CSS ========== */
+
+/* --- TABLAR --- */
+.modme-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.modme-tab {
+  padding: 10px 4px;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px; /* Chiziq ustiga chiqib turishi uchun */
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.modme-tab:hover { color: #f97316; }
+.modme-tab.active {
+  color: #f97316;
+  border-bottom-color: #f97316;
+}
+
+/* --- DUMALOQ TUGMALAR (Qalamcha, O'chirish...) --- */
+.action-btn-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #f97316;
+  color: #f97316;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.action-btn-circle:hover { background: #fff5ed; }
+
+.action-btn-circle.btn-danger-outline { border-color: #ef4444; color: #ef4444; }
+.action-btn-circle.btn-danger-outline:hover { background: #fef2f2; }
+
+.action-btn-circle.btn-warning-outline { border-color: #f59e0b; color: #f59e0b; }
+.action-btn-circle.btn-warning-outline:hover { background: #fffbeb; }
+
+/* --- CHAP PANEL MA'LUMOTLARI --- */
+.info-list-item {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+.info-list-item .lbl {
+  font-weight: 600;
+  color: #333;
+  margin-right: 5px;
+}
+.info-list-item .val { color: #555; }
+
+/* --- DAVOMAT JADVALI --- */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.attendance-table th {
+  color: #666;
+  font-weight: 500;
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.attendance-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+.attendance-table th:first-child,
+.attendance-table td:first-child {
+  text-align: left;
+}
+
+/* --- DAVOMAT TO'RTBURCHAKLARI --- */
+.att-cell {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+.att-cell.none { border: 1px solid #e0e0e0; background: #fff; color: transparent; }
+.att-cell.present { background: #22c55e; color: #fff; font-weight: bold; }
+.att-cell.absent { background: #ef4444; color: #fff; font-weight: bold; }

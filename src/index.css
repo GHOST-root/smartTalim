@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.1px solid red; */
+}
+
+/* Modallar ichidagi barcha inputlarni 100% kenglikka yoyish */
+.modal-body input,
+.modal-content input,
+.modal form input,
+.modal select {
+  width: 100% !important; /* Majburan to'liq enini egallaydi */
+  box-sizing: border-box;
+  min-height: 40px; /* Balandligi juda qisib ketmasligi uchun */
+}

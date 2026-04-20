@@ -1,0 +1,77 @@
+.group-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.group-modal-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.group-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.group-modal-header h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.group-modal-body {
+  padding: 24px;
+}
+
+.group-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.group-form-control:focus {
+  border-color: #60C3C5;
+}
+
+.group-hint-text {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.group-save-btn {
+  background-color: #60C3C5; /* Rasmda ko'rsatilgan Teal/Yashilroq rang */
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.group-save-btn:hover {
+  background-color: #4eb0b2;
+}

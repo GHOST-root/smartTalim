@@ -1,0 +1,251 @@
+/* =======================================
+   TASHQI OYNA VA SCROLL DIZAYNI
+======================================= */
+.custom-drawer {
+  width: 420px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Chetki qismlar qisqartirildi */
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: inherit;
+
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.custom-drawer::-webkit-scrollbar {
+  display: none;
+}
+
+/* SARLAVHA */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px !important;
+}
+
+.drawer-title {
+  margin: 0 !important;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.close-icon {
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* =======================================
+   FORM ELEMENTLARI VA BO'SHLIQLAR
+======================================= */
+/* Boxlar (qutilar) orasi qat'iy 12px */
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px !important; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+/* Quti ichidagi Label va Input orasi qat'iy 8px */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important; 
+  margin: 0 !important; /* Bootstrapni o'ldirish */
+  padding: 0 !important;
+}
+
+.custom-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 0 !important; /* Bootstrapni o'ldirish */
+  padding: 0 !important;
+  line-height: 1;
+}
+
+/* =======================================
+   INPUTLAR DIZAYNI (Aniq chegaralar bilan)
+======================================= */
+.custom-input {
+  width: 100%;
+  height: 40px !important;
+  /* 0.1px o'rniga aniq 1px qalinlik berildi, shunda ko'zga ko'rinadi */
+  border: 1px solid #d1d5db !important; 
+  border-radius: 6px;
+  padding: 0 12px !important;
+  font-size: 14px;
+  color: #374151;
+  background-color: #fff;
+  margin: 0 !important; /* Bootstrap marginini olib tashlash */
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.custom-input:focus {
+  border-color: #ffb703 !important; 
+}
+
+.disabled-input {
+  background-color: #f3f4f6 !important;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* =======================================
+   FOTO YUKLASH QUTISI (O'ZBEKCHA VA YONMA-YON)
+======================================= */
+.custom-file-wrapper {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.hidden-file-input {
+  display: none !important; 
+}
+
+.custom-file-label {
+  display: flex !important;
+  flex-direction: row !important; /* Qat'iy yonma-yon qilish */
+  align-items: center;
+  width: 100%;
+  height: 40px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+/* "Fayl tanlash" tugmasi qismi */
+.custom-file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f3f4f6;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  border-right: 1px solid #d1d5db;
+}
+
+/* Fayl nomi yoziladigan qism */
+.custom-file-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.preview-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+/* =======================================
+   JINS VA PAROL
+======================================= */
+.custom-radio-group {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  height: 40px; 
+  align-items: center;
+}
+
+.custom-radio-label {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+.custom-radio-label input {
+  margin: 0 !important;
+  width: auto !important;
+  cursor: pointer;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* =======================================
+   XATOLIKLAR VA TUGMA
+======================================= */
+.error-border {
+  border-color: #ef4444 !important;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: -4px; /* Sal teparoqqa surish */
+}
+
+.drawer-footer {
+  margin-top: 24px;
+}
+
+.custom-save-btn {
+  width: 100%;
+  height: 40px;
+  background-color: #ffb703;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 !important;
+}
+
+.custom-save-btn:hover {
+  background-color: #e5a400;
+}
+
+.custom-save-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}

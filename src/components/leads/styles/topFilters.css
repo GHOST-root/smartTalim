@@ -1,0 +1,126 @@
+/* Eng asosiy quti */
+.leads-board-filters {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ichki qator */
+.leads-filters-row {
+  display: flex;
+  flex-wrap: wrap; /* Ekranga sig'masa pastga tushadi */
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Qidiruv */
+.lf-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  width: 250px; /* Qat'iy o'lcham, butun ekranga cho'zilib ketmaydi */
+  height: 40px; /* Bizning standart 40px qoidamiz */
+  background-color: #fff;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.lf-search:focus-within {
+  border-color: #ffb703;
+}
+
+.lf-search input {
+  border: none !important;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  background: transparent;
+  color: #374151;
+}
+
+.lf-search-icon {
+  margin-right: 8px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Selectlar */
+.lf-select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  background: #fff;
+  color: #374151;
+  height: 40px; /* Standart */
+  width: auto;
+  min-width: 140px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lf-select:focus {
+  border-color: #ffb703;
+}
+
+/* Sanalar */
+.lf-dates {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lf-dates input[type="date"] {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  background: #fff;
+  color: #374151;
+  height: 40px;
+  width: 140px; /* Qat'iy uzunlik */
+  outline: none;
+}
+
+.lf-dates input[type="date"]:focus {
+  border-color: #ffb703;
+}
+
+.lf-dates span {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+/* Tozalash tugmasi */
+.lf-reset-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #6b7280;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px; /* To'rtburchak tekis tugma */
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.lf-reset-btn i {
+  font-size: 16px;
+}
+
+.lf-reset-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}

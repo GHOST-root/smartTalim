@@ -1,0 +1,145 @@
+/* =======================================
+   NABOR (MODAL) YARATISH DIZAYNI
+======================================= */
+.modal-verlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.6); 
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  z-index: 9999;
+  padding: 15px; /* 🌟 Oyna ekranga taqalib qolmasligi uchun */
+  box-sizing: border-box;
+}
+
+.modal-bbox {
+  background: #fff;
+  width: 100%;
+  max-width: 400px; /* Biroz ixchamlashtirildi */
+  max-height: 90vh; /* 🌟 ASOSIY YECHIM: Ekran balandligining 90% idan oshmaydi */
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+  flex-shrink: 0; /* 🌟 Siquvda kichrayib ketmasligi uchun */
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ef4444;
+}
+
+.modal-body {
+  padding: 20px;
+  overflow-y: auto; /* 🌟 ASOSIY YECHIM: Oyna sig'masa, ichi scroll bo'ladi */
+  display: block; /* 🌟 Flex o'chirildi, endi elementlar orasida keraksiz bo'shliq cho'zilmaydi! */
+}
+
+/* Kiritish maydonlari */
+.field {
+  margin-bottom: 16px; /* Aniq masofa */
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.field select,
+.field input {
+  width: 100%;
+  height: 40px; 
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.field select:focus,
+.field input:focus {
+  border-color: #3b82f6;
+}
+
+.roww {
+  display: flex;
+  gap: 12px;
+}
+
+.roww .field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Ixtiyoriy qismni ajratuvchi */
+.modal-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 12px 0 16px 0;
+}
+
+.optional-text {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Yaratish tugmasi */
+.modal-submit {
+  width: 100%;
+  height: 44px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.modal-submit:hover {
+  background-color: #2563eb;
+}

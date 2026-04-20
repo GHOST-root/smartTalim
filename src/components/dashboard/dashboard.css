@@ -1,0 +1,118 @@
+.custom-grid{
+  display:grid;
+
+  /* asosiy sehr shu */
+  grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+
+  gap:10px;
+  align-items:center;
+}
+
+/* ism kengroq bo‘lsin */
+.custom-grid .wide{
+  min-width:260px;
+}
+
+/* tugmalar yonma-yon */
+.custom-grid .actions{
+  display:flex;
+  gap:8px;
+}
+
+/* input + select */
+.custom-grid input,
+.custom-grid select{
+  width:100%;
+  height:34px;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:14px;
+  background:#fff;
+  outline:none;
+}
+
+.custom-grid input:focus,
+.custom-grid select:focus{
+  border-color:#3B82F6;
+}
+
+/* tugmalar */
+.btn-primary{
+  background:#3B82F6;
+  border:none;
+  color:#fff;
+  padding:0 14px;
+  height:34px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn-light{
+  background:#fff;
+  border:1px solid #d1d5db;
+  padding:0 10px;
+  height:34px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/*  */
+
+.filter-grid{
+  display:grid;
+
+  /* sig‘gani yonma-yon, qolganlari pastga */
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+
+  gap:10px;
+  align-items:center;
+}
+
+/* ism kengroq */
+.filter-grid .wide{
+  min-width:260px;
+}
+
+/* input + select */
+.filter-grid input,
+.filter-grid select{
+  width:100%;
+  height:34px;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:14px;
+  background:#fff;
+  outline:none;
+}
+
+.filter-grid input:focus,
+.filter-grid select:focus{
+  border-color:#3B82F6;
+}
+
+/* tugmalar */
+.actions{
+  display:flex;
+  gap:8px;
+}
+
+.btn-primary{
+  background:#3B82F6;
+  border:none;
+  color:#fff;
+  padding:0 14px;
+  height:34px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn-light{
+  background:#fff;
+  border:1px solid #d1d5db;
+  padding:0 10px;
+  height:34px;
+  border-radius:6px;
+  cursor:pointer;
+}

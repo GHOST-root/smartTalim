@@ -1,0 +1,157 @@
+.dashboard-container {
+  padding: 24px;
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  
+  /* YAGONA TO'G'RI YECHIM: Ekranni cho'zilib ketishdan saqlaydi */
+  width: 100%;
+  min-width: 0; 
+  box-sizing: border-box;
+}
+
+/* Grafik va Jadval kartalari */
+.dashboard-card {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  
+  /* YAGONA TO'G'RI YECHIM: Timetable faqat shu kartaning ichida scroll bo'ladi */
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* 8 ta statistika kartalari uchun maxsus Grid */
+.stats-grid {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px; /* Kartalar orasidagi masofa */
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1400px) { 
+  .stats-grid { 
+    flex-wrap: wrap; 
+  }
+  .stat-card { 
+    /* Ekranga sig'maganda 4 tadan (25%) qilib bo'lish */
+    flex: 1 1 calc(25% - 15px); 
+  }
+}
+
+@media (max-width: 768px) { 
+  .stat-card { 
+    /* Mobil telefonda 2 tadan (50%) qilib bo'lish */
+    flex: 1 1 calc(50% - 15px); 
+  }
+}
+
+/* Statistika kartasi dizayni */
+.stat-card {
+  /* Eng asosiy qoida: 100% ni teng 8 ga bo'lish (har biriga ~12.5% dan tushadi) */
+  flex: 1 1 0%; 
+  width: 100%;
+  min-width: 0; /* Yozuv uzun bo'lsa ham kartani toshirib yubormasligi uchun */
+  
+  /* Qolgan dizayn elementlari (O'zingiznikilar) */
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(242, 122, 33, 0.15); /* To'q sariq soya */
+  border-color: #F27A21;
+}
+
+.stat-icon {
+  font-size: 28px;
+  color: #F27A21;
+  margin-bottom: 12px;
+}
+
+.stat-title {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 500;
+  color: #F27A21;
+  margin: 0;
+}
+
+/* Grafik va Jadval kartalari */
+.dashboard-card {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* Dars jadvali (Timetable) stillari */
+.timetable-wrapper {
+  overflow-x: auto;
+}
+
+.timetable th, .timetable td {
+  border: 1px solid #eaeaea;
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.timetable th {
+  background-color: #fcfcfc;
+  color: #555;
+  font-weight: 500;
+}
+
+.time-col {
+  font-weight: 600;
+  color: #333;
+  width: 80px;
+}
+
+.lesson-block {
+  border-radius: 6px;
+  padding: 8px;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.lesson-block.red { background-color: #FEF2F2; border-left: 3px solid #EF4444; color: #991B1B; }
+.lesson-block.green { background-color: #F0FDFA; border-left: 3px solid #10B981; color: #065F46; }
+
+.lesson-count-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}

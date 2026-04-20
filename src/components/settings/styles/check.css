@@ -1,0 +1,156 @@
+/* check.css */
+.check-settings-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.check-settings-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  padding: 32px 40px;
+  border: 1px solid #f1f5f9;
+  width: 100%;
+  max-width: 550px; /* O'qishga qulay, o'rtada turuvchi quti */
+}
+
+.check-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.check-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Rasm yuklash maydoni */
+.file-upload-group {
+  margin-bottom: 24px;
+}
+
+.file-upload-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.custom-file-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #64748b;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.custom-file-input:hover {
+  border-color: #f97316; /* Orange hover */
+  background-color: #fff7ed;
+}
+
+.checkbox-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+/* MAXSUS ORANGE CHECKBOX DIZAYNI */
+.custom-orange-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin-left: -12px; /* Tekislash uchun */
+}
+
+.custom-orange-checkbox:hover {
+  background-color: #fff7ed; /* Yumshoq sariq fon */
+}
+
+.custom-orange-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.orange-checkbox-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.custom-orange-checkbox:hover input ~ .orange-checkbox-box {
+  border-color: #94a3b8;
+}
+
+/* Belgilanganda (Orange) */
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box {
+  background-color: #f97316;
+  border-color: #f97316;
+}
+
+/* Pichka chizish */
+.custom-orange-checkbox input:checked ~ .orange-checkbox-box:after {
+  content: "";
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.orange-checkbox-label {
+  font-size: 15px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Orange Saqlash Tugmasi */
+.save-orange-btn {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.save-orange-btn:hover {
+  background-color: #ea580c; /* To'qroq orange */
+}
+
+.save-orange-btn:active {
+  transform: scale(0.98);
+}

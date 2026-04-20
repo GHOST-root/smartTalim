@@ -1,0 +1,94 @@
+.border-left-blue {
+  border-left: 4px solid #0ea5e9 !important; /* Ko'k yon chiziq */
+}
+
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.btn-danger-outline {
+  background-color: transparent;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.btn-danger-outline:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+/* Filtrlar qatori */
+.filter-grid-custom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1.5fr auto;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.f-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.f-item label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.f-item input,
+.f-item select {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.f-item input:focus,
+.f-item select:focus {
+  border-color: #f97316;
+}
+
+.btn-orange {
+  background: #f97316;
+  color: white;
+  border: none;
+  height: 38px;
+  padding: 0 24px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.btn-orange:hover {
+  background: #ea580c;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .filter-grid-custom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-grid-custom {
+    grid-template-columns: 1fr;
+  }
+}

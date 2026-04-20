@@ -1,0 +1,159 @@
+/* .payment-modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  animation: slideInRight 0.3s ease-out forwards;
+} */
+
+.payment-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.payment-form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.payment-form-group label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.payment-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.payment-form-control:disabled {
+  background-color: #E8ECEF;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.payment-form-control:focus {
+  border-color: #F27A21;
+}
+
+/* Balans badji */
+.payment-balance-badge {
+  background-color: #F27A21;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 12px;
+}
+
+/* To'lov usuli (Radio) Grid */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.payment-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.payment-radio-label input[type="radio"] {
+  accent-color: #F27A21; /* Radio tugmani to'q sariq qiladi */
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Saqlash tugmasi (Ko'k-yashil / Teal) */
+.payment-save-btn {
+  background-color: #60C3C5;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+
+.payment-save-btn:hover {
+  background-color: #4eb0b2;
+}
+
+/* modal overlay — butun sahifa ustida bo'lsin */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Qora fon qalinlashtirildi */
+  z-index: 999999; /* Barcha narsadan ustida turadi */
+  display: flex;
+  justify-content: flex-end; /* Oynani o'ng tomonga taqab qo'yadi */
+}
+
+/* modal container modal overlaydan yuqori bo'lsin */
+.payment-modal-container {
+  position: relative; 
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  z-index: 99999;
+  flex-direction: column;
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.modal-header{
+  padding: 12px !important;
+}
+
+.payment-radio-label {
+  display: flex;
+  align-items: center;   /* Vertikal tenglashtiradi */
+  gap: 10px;             /* Radio va text orasini ajratadi */
+  cursor: pointer;
+}
+
+.payment-radio-label input[type="radio"] {
+  margin: 0;             /* Default marginni olib tashlaymiz */
+  transform: translateY(3px) !important;
+  margin-right: 3px !important;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

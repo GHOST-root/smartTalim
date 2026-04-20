@@ -1,0 +1,82 @@
+.hisob-wrapper h4 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.settings-card {
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+}
+
+.settings-group-title {
+  color: #ff7a00;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Zamonaviy Switch Dizayni */
+.form-switch .form-check-input {
+  width: 2.8em;
+  height: 1.4em;
+  cursor: pointer;
+  background-color: #e9ecef;
+  border-color: #d3d9df;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-switch .form-check-input:focus {
+  box-shadow: none;
+  border-color: #ff7a00;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #ff7a00;
+  border-color: #ff7a00;
+}
+
+.form-switch .form-check-label {
+  cursor: pointer;
+  font-size: 14.5px;
+  color: #34495e;
+  font-weight: 500;
+  padding-left: 0.5rem;
+  padding-top: 2px;
+}
+
+.form-switch.mb-3 {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.form-switch.mb-3:hover {
+  background-color: #f8f9fa;
+}
+
+.save-btn {
+  background-color: #ff7a00;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.2);
+}
+
+.save-btn:hover {
+  background-color: #e66e00;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(255, 122, 0, 0.3);
+}
+
+.save-btn:disabled {
+  background-color: #ccc;
+  box-shadow: none;
+  transform: none;
+}

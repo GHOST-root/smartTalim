@@ -1,0 +1,135 @@
+.receipt-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.receipt-modal-container {
+  background-color: #f8f9fa; /* Chek orqasidagi och kulrang fon */
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.receipt-modal-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.receipt-modal-header h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.receipt-modal-body {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Kvitansiya qog'ozi dizayni */
+.receipt-paper {
+  background: white;
+  width: 100%;
+  padding: 24px 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+/* Qog'ozning tepa va pastki archilgan (zigzag) effekti */
+.receipt-paper::before, .receipt-paper::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 10px;
+  background-size: 20px 20px;
+}
+
+.receipt-paper::before {
+  top: -10px;
+  background-image: radial-gradient(circle at 10px 0, transparent 10px, white 11px);
+}
+
+.receipt-paper::after {
+  bottom: -10px;
+  background-image: radial-gradient(circle at 10px 20px, transparent 10px, white 11px);
+}
+
+/* Chek ichidagi matnlar */
+.receipt-logo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #F27A21;
+  margin-bottom: 16px;
+}
+
+.receipt-barcode {
+  border: 1px solid #ddd;
+  height: 40px;
+  margin: 0 auto 20px auto;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.receipt-info-row {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.receipt-info-row strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.receipt-divider {
+  border-top: 1px dashed #ddd;
+  margin: 16px 0;
+}
+
+.receipt-footer-text {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Chop etish tugmasi */
+.receipt-print-btn {
+  background-color: #0D9488; /* Teal rang */
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.receipt-print-btn:hover {
+  background-color: #0f766e;
+}

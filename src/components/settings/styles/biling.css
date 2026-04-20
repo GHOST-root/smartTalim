@@ -1,0 +1,287 @@
+
+
+/* PAGE WRAPPER */
+.modme-billing-page {
+  padding: 24px;
+}
+
+/* SIMPLE GRID (bootstrap o‘rniga) */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-xl-6 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .col-xl-6 {
+    width: calc(50% - 12px);
+  }
+}
+
+/* CARD BOX */
+.billing-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* TITLES */
+.billing-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+/* FORM WRAP */
+.billing-form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.billing-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.billing-required {
+  color: #ef4444;
+}
+
+/* SELECT */
+.billing-select-wrap {
+  position: relative;
+}
+
+.billing-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  transition: 0.2s;
+  appearance: none;
+}
+
+.billing-select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+.billing-select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  pointer-events: none;
+}
+
+/* BUTTON */
+.billing-pay-btn {
+  background: linear-gradient(135deg, #6c63ff, #574fd6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.billing-pay-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* HELPER TEXT */
+.billing-helper-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* HISTORY TABLE */
+.billing-history-box {
+  margin-top: 24px;
+}
+
+.billing-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billing-history-table th {
+  text-align: left;
+  font-size: 13px;
+  color: #6b7280;
+  padding-bottom: 10px;
+}
+
+.billing-history-table td {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* PRICING GRID */
+.billing-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .billing-plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .billing-plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PLAN CARD (START / BASIC / PRO / PREMIUM) */
+.billing-plan-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.billing-plan-title {
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* HAR BIR QATOR – CHAP QORA, O‘NG SARIQ BOX */
+.billing-price-row {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
+/* CHAP TOMON (3 OY, 6 OY...) vertikal yozuv */
+.billing-price-side {
+  width: 45px;
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  border-radius: 6px 0 0 6px;
+}
+
+/* O‘NG TOMON – SARIQ KATTA KUTI */
+.billing-price-main {
+  flex: 1;
+  background: #fbbf24;
+  border-radius: 0 10px 10px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* OLD PRICE (ustiga chizilgan) */
+.billing-old-price {
+  font-size: 11px;
+  text-decoration: line-through;
+  color: #333;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+/* AGAR OLD PRICE YO‘Q BO‘LSA – BALANDLIK SAQLASH UCHUN */
+.billing-old-price-empty {
+  height: 12px;
+}
+
+/* YANGI NARX */
+.billing-new-price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* BADGE (% bonus) */
+.billing-discount-badge {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50px;
+}
+
+/* FOOTER (modme + Gamification) */
+.billing-pricing-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.billing-brand {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.billing-brand span {
+  color: #6c63ff;
+}
+
+.billing-gamification-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.billing-gamification-value {
+  font-weight: 700;
+  color: #111827;
+}
+.billing-price-row {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+  cursor: pointer; /* bosish uchun */
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.billing-price-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}

@@ -1,0 +1,292 @@
+/* Asosiy sahifa foni */
+.profile-page-bg {
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Karta stillari (Card) */
+.custom-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+
+}
+
+/* Chap ustun: Avatar va Ikonkalar */
+.profile-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 180px;
+  height: 180px;
+  background-color: #E5E7EB;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9CA3AF;
+  font-size: 32px;
+}
+
+.profile-actions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.circle-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.circle-action-btn.orange { border: 1px solid #F27A21; color: #F27A21; }
+.circle-action-btn.orange:hover { background: #fff4ed; }
+
+.circle-action-btn.red { border: 1px solid #EF4444; color: #EF4444; }
+.circle-action-btn.red:hover { background: #fef2f2; }
+
+.circle-action-btn.teal { border: 1px solid #0D9488; color: #0D9488; }
+.circle-action-btn.teal:hover { background: #f0fdfa; }
+
+/* Profil ma'lumotlari matnlari */
+.profile-name { font-size: 22px; font-weight: 500; color: #333; margin: 0 0 4px 0; }
+.profile-id { color: #888; font-size: 13px; margin-bottom: 16px; }
+
+.balance-badge {
+  background-color: #EF4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.coins-text { font-size: 14px; color: #555; display: flex; align-items: center; gap: 6px; margin-top: 16px; margin-bottom: 20px;}
+.coin-icon { color: #FBBF24; }
+
+.info-text { font-size: 13px; color: #666; margin-bottom: 4px; }
+.info-value { font-size: 14px; color: #333; font-weight: 500; margin-bottom: 16px; }
+.info-value.blue-link { color: #2563EB; cursor: pointer; }
+
+.branch-badge {
+  background-color: #F3F4F6;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Pastki tugmalar (Guruhga qo'shish / To'lov) */
+.profile-bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.pill-dropdown-btn {
+  background: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.pill-dropdown-btn.teal { border: 1px solid #0D9488; color: #0D9488; }
+.pill-dropdown-btn.teal:hover { background: #f0fdfa; }
+.pill-dropdown-btn.green { border: 1px solid #22C55E; color: #22C55E; }
+.pill-dropdown-btn.green:hover { background: #f0fdf4; }
+
+/* Eslatma kartasi */
+.note-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-left: 4px solid #0EA5E9; /* Chapdagi ko'k chiziq */
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-text { font-size: 14px; color: #666; }
+.note-actions { display: flex; flex-direction: column; gap: 8px; }
+
+/* O'ng Ustun: Tablar */
+.custom-tabs {
+  display: flex;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 24px;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #6B7280;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  color: #F27A21;
+  border-bottom: 2px solid #F27A21;
+  font-weight: 500;
+}
+
+/* Guruh ma'lumoti kartasi (Guruhlar tab ichida) */
+.group-details-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.group-top-row { display: flex; justify-content: space-between; margin-bottom: 16px; }
+.group-badge { background: #F3F4F6; color: #333; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; display: inline-block; margin-bottom: 8px; }
+.group-title { font-size: 14px; color: #333; margin-bottom: 4px; }
+.group-teacher { font-size: 13px; color: #666; }
+.group-dates { text-align: right; font-size: 13px; color: #666; line-height: 1.6; }
+
+.group-divider { border-top: 1px solid #E5E7EB; margin: 16px 0; }
+
+.group-bottom-row { display: flex; justify-content: space-between; align-items: flex-end; }
+.group-status-list { list-style: none; padding: 0; margin: 0; font-size: 13px; color: #555; line-height: 1.8; }
+.group-status-list span { color: #333; font-weight: 500; }
+
+/* Oylik balans xolati */
+.section-title { font-size: 18px; font-weight: 500; color: #333; margin-bottom: 16px; }
+
+.monthly-balance-box {
+  border: 1px solid #FCA5A5; /* Och qizil border */
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: inline-block;
+  margin-bottom: 32px;
+  min-width: 200px;
+}
+
+.mb-date { border: 1px solid #FCA5A5; color: #EF4444; padding: 2px 8px; border-radius: 4px; font-size: 12px; display: inline-block; margin-bottom: 12px; }
+.mb-amount { font-size: 24px; font-weight: 500; color: #EF4444; }
+
+/* To'lovlar Jadvali */
+.payments-table-wrapper {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.payments-table { width: 100%; border-collapse: separate; text-align: left; font-size: 13px; }
+.payments-table th { padding: 16px 20px; font-weight: 500; color: #333; border-bottom: 1px solid #E5E7EB; background-color: #fcfcfc; }
+.payments-table td { padding: 16px 20px; border-bottom: 1px solid #f9fafb; vertical-align: middle; color: #444;}
+
+.badge-system { background-color: #9CA3AF; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; }
+
+.print-btn {
+  background: white;
+  border: 1px solid #0D9488;
+  color: #0D9488;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.print-btn:hover { background: #f0fdfa; }
+
+.action-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.payments-table td {
+  overflow: visible !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 8px 0;
+  z-index: 10;   /* 99999 emas */
+}
+
+.dropdown-item {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+/* .dropdown-toggle {
+  position: relative;
+  z-index: 10000;
+} */
+
+.profile-page-bg,
+.custom-card,
+.payments-table-wrapper {
+  transform: none !important;
+  overflow: visible !important;
+  z-index: auto !important;
+}
+
+/*  */
+
+.profile-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+
+  border: none;
+  background: rgba(0,0,0,0.05);
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.profile-close:hover {
+  background: rgba(0,0,0,0.1);
+}

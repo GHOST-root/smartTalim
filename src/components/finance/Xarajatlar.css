@@ -1,0 +1,326 @@
+/* Xarajatlar.css */
+.x-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header-card {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.icon-box {
+  font-size: 35px;
+}
+
+.right-card {
+  position: sticky;
+  top: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.filter-box {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.filter-btn {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 8px;
+}
+
+.filter-btn:hover {
+  background: #ff8f26;
+}
+
+.clear-btn {
+  width: 100px;
+  height: 38px;
+  margin-top: 24px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.tolov-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 12px;
+}
+
+.save-btn {
+  max-width: 100px;
+  background-color: #ffa45c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.save-btn:hover {
+  background-color: #ff8f3d;
+}
+
+.delete-btn {
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.btn-end {
+  border: none;
+}
+
+.kok-chiziq {
+  border-top: 2px solid #000;
+}
+
+.jami-xarajatlar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-filter-btn {
+  border-radius: 8px;
+  height: 38px;
+}
+
+/* Grafik kartlari uchun */
+.grafik-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.grafik-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.grafik-line {
+  width: 4px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 2px;
+}
+
+.grafik-body {
+  height: 300px;
+  position: relative;
+}
+
+/* Jadval action ikonlari */
+.action-icon {
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+/* XARAJAT QO'SHISH DRAWER (O'NG TOMON OYNA) */
+.x-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.x-drawer-container {
+  width: 420px;
+  height: 100vh;
+  background: #fff;
+  padding: 20px 25px;
+  overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grafik-body {
+    height: 250px;
+  }
+  
+  .tolov-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-clean{
+  background:#fff;
+  border-radius:10px;
+  padding:22px;
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+
+.title{
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+/* form */
+.expense-form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.f-item{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-top: -20px;
+}
+
+.f-item label{
+  font-size:13px;
+  color:#6b7280;
+  font-weight:500;
+}
+
+/* inputs */
+.expense-form input,
+.expense-form select{
+  height:36px;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:14px;
+  background:#fff;
+  outline:none;
+}
+
+.expense-form input:focus,
+.expense-form select:focus{
+  border-color:#3B82F6;
+}
+
+/* radios */
+.radio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+}
+
+.radio-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+/* button */
+.save-btn{
+  margin-top:8px;
+  height:38px;
+  border:none;
+  border-radius:6px;
+  background:#ff7a00;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/*  */
+
+.filter-card{
+  background:#fff;
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+
+/* GRID */
+.filter-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:14px;
+}
+
+.f-item{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.f-item label{
+  font-size:13px;
+  color:#6b7280;
+  font-weight:500;
+}
+
+/* inputs */
+.filter-grid input,
+.filter-grid select{
+  height:36px;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:14px;
+  background:#fff;
+}
+
+.filter-grid input:focus,
+.filter-grid select:focus{
+  border-color:#3B82F6;
+  outline:none;
+}
+
+/* buttons */
+.filter-actions{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+
+.btn-orange{
+  background:#ff7a00;
+  border:none;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn-light{
+  background:#fff;
+  border:1px solid #d1d5db;
+  padding:8px 18px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.tahrir{
+  margin-top: -20px;
+}

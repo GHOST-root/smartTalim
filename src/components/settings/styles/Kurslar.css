@@ -1,0 +1,1057 @@
+
+
+.center-automation-app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.course-dashboard-container {
+    padding: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-course-button {
+    background-color: #f7931e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.add-course-button:hover {
+    background-color: #e57e00;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    color: #666;
+}
+
+.course-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.course-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-image-container {
+    height: 150px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-illustration-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+.card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.action-button {
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.action-button:hover { background: white; }
+
+.edit-btn { color: #f7931e; }
+.delete-btn { color: #e74c3c; }
+
+.card-info {
+    padding: 15px;
+}
+
+.course-name {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.course-price {
+    font-size: 16px;
+    color: #f7931e;
+    font-weight: bold;
+}
+
+.add-course-modal, .add-lesson-modal {
+    background: white;
+    width: 400px;
+    height: 100%;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.exit{
+    color: #000;
+}
+
+.modal-header h3 {
+    margin: 0 !important;
+    font-size: 20px !important;
+    color: #1e293b !important;
+    font-weight: 600 !important;
+}
+
+.close-button {
+    background: none !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #94a3b8 !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: color 0.2s !important;
+}
+
+
+.input-error { border-color: #e74c3c !important; }
+
+.error-text {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.course-details-page {
+    padding: 20px 0;
+}
+
+.back-button {
+    background: none;
+    border: 1px solid #ccc;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.course-content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.course-sidebar {
+    width: 300px;
+}
+
+.course-image-big {
+    height: 250px;
+    background-color: #9060c5;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.image-actions-top {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.image-action-icon {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.course-sidebar h3 {
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.course-info-list {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.course-info-list p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.course-main-content {
+    flex-grow: 1;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.tabs-nav {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-link.active {
+    color: #f7931e;
+    border-bottom-color: #f7931e;
+    font-weight: bold;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.empty-tab-state {
+    padding: 20px;
+    background-color: #fff3e0;
+    border: 1px solid #ffcc80;
+    color: #e57e00;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.lessons-header, .levels-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.levels-header h3 { margin: 0; }
+
+.add-lesson-button, .add-level-button {
+    background-color: #f7931e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.add-level-button { background-color: #3498db; }
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+
+.action-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.action-icon-button.edit { color: #f7931e; }
+.action-icon-button.delete { color: #e74c3c; }
+
+.actions-cell {
+    width: 100px;
+}
+
+.materials-header {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-folder-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.add-folder-input-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-folder-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.folder-table tr td:first-child {
+    width: 30px;
+    text-align: center;
+    color: #f7931e;
+}
+
+.modal-right-slide {
+    width: 450px !important; /* Kengroq va bemalol qildik */
+    height: 100vh !important;
+    background: #fff !important;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important; /* 🌟 MUHIM: Tashqi paddinglarni mutlaqo nol qildik */
+    margin: 0 !important;
+}
+
+.level-grid {
+    margin-top: 20px;
+    gap: 15px; 
+}
+
+.level-card {
+    width: 200px; 
+}
+
+.add-course-modal, .add-lesson-modal { 
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-image-container {
+    height: 150px;
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-initials {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 40px; 
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8); 
+    pointer-events: none; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.level-card .card-initials {
+    font-size: 30px; 
+}
+
+
+
+/* CenterAutomation.css (Yakuniy Versiya: Hover effektisiz) */
+
+/* --- Umumiy va Animatsiyalar --- */
+.center-automation-app {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+}
+
+.dashboard-title {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Modal Right Slide (Kurs, Daraja, Dars, Fayl modallari) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.modal-right-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px; 
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 0.3s forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.modal-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 24px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    background-color: #fff !important;
+    flex-shrink: 0 !important; 
+}
+
+/* Close tugmasi hoveri qoldirildi */
+.close-button:hover {
+    color: #ef4444 !important;
+}
+
+.modal-body {
+    padding: 20px !important; /* Umumiy ichki bo'shliqni biroz kamaytirdik */
+    overflow-y: auto !important; 
+    overflow-x: hidden !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Scrollbarni (aylantirgichni) chiroyli va zamonaviy qilish */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* 🌟 FORM ELEMENTLARI 🌟 */
+.form-group {
+    margin-bottom: 0px !important; /* Qatorlar orasidagi masofa qisqardi */
+}
+
+.form-group label {
+    display: block !important;
+    margin-bottom: 4px !important; /* Yozuv va input orasidagi masofa qisqardi */
+    font-weight: 500 !important;
+    color: #4b5563 !important;
+    font-size: 13px !important; /* Yozuv biroz ixchamlashdi */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100% !important;
+    padding: 0 12px !important;
+    border: 1px solid #cbd5e1 !important; /* Border ko'rinadiganroq qilindi */
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    
+    /* 🌟 ENG MUHIMI: Inputlarga och kulrang fon beramiz, shunda oq modaldan yaqqol ajralib turadi */
+    background-color: #f8fafc !important; 
+    transition: all 0.2s !important;
+}
+
+.form-group input, 
+.form-group select {
+    height: 40px !important; /* Standart 40px o'lcham */
+}
+
+.form-group textarea {
+    padding: 10px 12px !important;
+    min-height: 80px !important; /* Textarea uchun qat'iy balandlik */
+    height: auto !important;
+    resize: vertical !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #f97316 !important; /* Sabzi rang */
+    background-color: #fff !important; /* Bosilganda oppoq bo'ladi */
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1) !important;
+    outline: none !important;
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+}
+
+/* Saqlash tugmasi (Sabzi rangda) */
+.save-button {
+    width: 100% !important;
+    height: 46px !important;
+    background-color: #f97316 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+.save-button:hover {
+    background-color: #ea580c !important;
+}
+
+/* --- Ogohlantirish (Confirmation) Modali --- */
+.confirmation-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transform: scale(0.9);
+    animation: fadeInScale 0.2s forwards;
+}
+
+.confirmation-modal h3 {
+    color: #34495e;
+    margin-top: 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.confirmation-modal p {
+    color: #777;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.confirm-delete-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.cancel-button {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+.cancel-button:hover {
+    background-color: #dbe4e6;
+}
+
+.confirm-delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.confirm-delete-button:hover {
+    background-color: #c0392b;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Kurslar Dashboard --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Yangi kurs qo'shish tugmasi (Sabzi rangda) */
+.add-course-button {
+    padding: 10px 15px;
+    background-color: #E67E22; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.add-course-button i {
+    margin-right: 8px;
+}
+
+.add-course-button:hover {
+    background-color: #D35400;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding-bottom: 30px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: box-shadow 0.2s; 
+    cursor: pointer;
+    position: relative;
+}
+
+/* HOVER OLIB TASHLANDI: Kurs kartochkasi hech qanday animatsiyasiz qoladi */
+.course-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Shadow o'zgarmaydi */
+}
+
+
+.card-image-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-image-container.has-image {
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.card-initials {
+    z-index: 2; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.card-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 5px;
+}
+
+.action-button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333;
+    font-size: 14px;
+}
+
+.action-button.edit-btn:hover {
+    background-color: #E67E22; /* Sabzi rang */
+    color: white;
+ 
+}
+
+.action-button.delete-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.course-name {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.course-price {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 20px;
+    border: 1px dashed #ccc;
+}
+
+/* --- Kurs Detallari Sahifasi --- */
+.course-details-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ortga tugmasi (Sabzi rangda) */
+.back-button {
+    background: none;
+    border: none;
+    color: #E67E22; 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    align-self: flex-start;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+/* ... qolgan uslublar o'zgarmaydi ... */
+
+/* Tabs Navigatsiya */
+.tabs-nav {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #777;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.tab-link:hover {
+    color: #333;
+}
+
+.tab-link.active {
+    color: #E67E22; /* Sabzi rang */
+}
+
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #E67E22; /* Sabzi rang */
+}
+
+/* Darajalar bo'limi */
+.levels-header {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 15px;
+}
+
+.add-level-button {
+    padding: 8px 12px;
+    background-color: #E67E22;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.add-level-button:hover {
+    background-color: #D35400;
+}
+
+
+/* --- Rasm Yuklash Elementlari Dizayni (Saqlangan) --- */
+.attachment-group {
+    padding: 12px !important; /* Ichki bo'shliq qisqartirildi */
+    border: 1px dashed #94a3b8 !important; /* Chiziq aniqroq qilindi */
+    border-radius: 6px !important;
+    background-color: #f1f5f9 !important;
+}
+
+.attachment-display {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-top: 6px !important;
+}
+
+.file-name {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 0;
+}
+
+.remove-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.upload-btn {
+    height: 36px !important;
+    padding: 0 16px !important;
+    background-color: #f97316 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.upload-btn:hover {
+    background-color: #ea580c !important;
+}
+
+.remove-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #e67e22;
+}
+
+.image-preview-small {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Guruhlar bo'limi uchun maxsus uslublar */
+.groups-info-container {
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* ... qolgan jadval va boshqa uslublar qoladi ... */
+
+
+
+
+
+
+/* --- CenterAutomation.css dan o'zgartiriladigan qism --- */
+
+.card-image-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    background-size: cover;
+    /* TUZATISH 1: Rasm markazda tursin */
+    background-position: center; 
+}
+
+.card-image-container.has-image {
+    background-blend-mode: multiply;
+    /* Rasmli kursda fonni biroz qoraytirish (initials ko'rinishi uchun) */
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.card-initials {
+    z-index: 2; 
+    /* TUZATISH 2: Initialslarni markazga olib kelish */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+/* --- Kurs Detallari Sahifasi (Sidebardagi katta rasm) --- */
+
+.course-image-big {
+    /* ... (mavjud uslublar qoladi) ... */
+    height: 250px; /* Misol uchun */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Kontentni pastga suradi */
+    padding: 15px;
+    position: relative;
+    background-size: cover;
+    /* TUZATISH 3: Katta rasm markazda tursin */
+    background-position: center; 
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.course-image-big.has-image-details {
+    /* Katta rasm fonini biroz qoraytirish */
+    background-blend-mode: multiply; 
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-initials-details {
+    z-index: 2;
+    font-size: 60px;
+    font-weight: bold;
+    /* TUZATISH 4: Katta rasmda initialslarni markazga olib kelish */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    /* Oq fon bo'lsa ko'rinishi uchun biroz soya qo'shish */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5); 
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px; /* Standart kurslar uchun bo'shliq */
+    padding-bottom: 30px;
+}
+/* qo'llang: global CSS yoki component css */

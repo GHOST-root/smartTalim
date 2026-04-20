@@ -1,0 +1,97 @@
+/* editLead.css - BOOTSTRAPSIZ TOZA DIZAYN */
+.lead-drawer-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(3px);
+  z-index: 1049;
+}
+
+.lead-drawer {
+  position: fixed; top: 0; right: 0; width: 450px; height: 100%;
+  background: #fff; box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+  z-index: 1050; display: flex; flex-direction: column;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.lead-drawer-header {
+  padding: 20px 24px; border-bottom: 1px solid #f1f5f9;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+/* Tab Navbar Dizayni */
+.drawer-tabs {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.drawer-tab {
+  flex: 1; padding: 14px 0; text-align: center;
+  background: none; border: none; font-size: 14px; font-weight: 600;
+  color: #64748b; cursor: pointer; border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.drawer-tab:hover { color: #0f172a; }
+
+.drawer-tab.active {
+  color: #f97316; border-bottom-color: #f97316; background: #fff;
+}
+
+.lead-drawer-body {
+  padding: 24px; flex-grow: 1; overflow-y: auto;
+}
+
+.lead-drawer-footer {
+  padding: 16px 24px; border-top: 1px solid #f1f5f9; background: #f8fafc;
+  display: flex; justify-content: flex-end; gap: 12px;
+}
+
+/* Formalar (Qat'iy 40px) */
+.field-group { margin-bottom: 16px; }
+.field-label { display: block; font-size: 13px; font-weight: 600; color: #4b5563; margin-bottom: 6px; }
+
+.custom-input, .custom-select {
+  width: 100%; height: 40px; padding: 0 12px;
+  border: 1px solid #cbd5e1; border-radius: 8px;
+  font-size: 14px; color: #334155; outline: none; transition: 0.2s;
+  background: #fff; box-sizing: border-box;
+}
+
+.custom-input.error { border-color: #ef4444; }
+
+.custom-textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px;
+  font-size: 14px; color: #334155; outline: none; resize: vertical; min-height: 80px;
+}
+
+.custom-input:focus, .custom-select:focus, .custom-textarea:focus {
+  border-color: #f97316; box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.row-split { display: flex; gap: 16px; margin-bottom: 16px; }
+.row-split .field-group { flex: 1; margin-bottom: 0; }
+
+/* Qo'shimcha maydonlar (Ikonkalar) */
+.extra-fields-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;
+}
+
+.extra-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid #cbd5e1; background: #f8fafc;
+  color: #64748b; cursor: pointer; transition: 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.extra-btn:hover { border-color: #94a3b8; color: #334155; }
+.extra-btn.active { background: #f97316; border-color: #f97316; color: white; }
+
+/* Tugmalar */
+.btn-cancel { height: 40px; padding: 0 20px; background: #f1f5f9; color: #334155; border: none; border-radius: 8px; cursor: pointer; font-weight: 500; transition: 0.2s; }
+.btn-cancel:hover { background: #e2e8f0; }
+
+.btn-save { height: 40px; padding: 0 24px; background: #f97316; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.2s; }
+.btn-save:hover:not(:disabled) { background: #ea580c; }
+.btn-save:disabled { opacity: 0.7; cursor: not-allowed; }
+
+@keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }

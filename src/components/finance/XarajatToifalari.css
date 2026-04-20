@@ -1,0 +1,589 @@
+/* ===================================
+   XARAJAT TOIFALARI - MAIN STYLES
+   =================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Source Sans Pro", "Helvetica Neue",
+    sans-serif;
+}
+
+/* ===================================
+   CONTAINER & LAYOUT
+   =================================== */
+
+.xarajat-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 32px 20px;
+}
+
+.xarajat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.xarajat-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.xarajat-header h1 i {
+  color: #667eea;
+  font-size: 32px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .content-wrapper {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn-add-modern {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff6b35 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.btn-add-modern:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-add-modern:active {
+  transform: translateY(-1px);
+}
+
+.btn-add-modern i {
+  font-size: 18px;
+}
+
+.btn-next {
+  width: 100%;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-family: inherit;
+}
+
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.btn-next:active {
+  transform: translateY(0);
+}
+
+.btn-next i {
+  margin-right: 8px;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  font-family: inherit;
+}
+
+.btn-save:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+.btn-save:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-save:disabled {
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
+  cursor: not-allowed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn-save i {
+  margin-right: 8px;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 13px 20px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
+
+.btn-cancel:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  color: #1f2937;
+  transform: translateY(-1px);
+}
+
+.btn-cancel:active {
+  transform: translateY(0);
+}
+
+.btn-cancel i {
+  margin-right: 8px;
+}
+
+.btn-close-panel {
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #6b7280;
+  transition: all 0.3s ease;
+  padding: 0;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.btn-close-panel:hover {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  color: #374151;
+  transform: rotate(90deg);
+}
+
+.btn-close-panel:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+/* ===================================
+   TABLE STYLES
+   =================================== */
+
+.table-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+}
+
+.table-card .table {
+  margin: 0;
+  border: none;
+}
+
+.table-card .table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.table-card .table thead th {
+  border: none;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  font-family: inherit;
+}
+
+.table-card .table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.table-card .table tbody tr:hover {
+  background-color: #f9fafb;
+  box-shadow: inset 4px 0 0 #667eea;
+}
+
+.table-card .table tbody td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  color: #374151;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.table-card .table tbody td.id-cell {
+  color: #9ca3af;
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+}
+
+.table-card .table tbody td.name-cell {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ===================================
+   ACTIONS
+   =================================== */
+
+.actions-cell {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.action-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  background: #f3f4f6;
+  border: 1px solid transparent;
+}
+
+.action-icon.edit:hover {
+  background: #dbeafe;
+  border-color: #667eea;
+  transform: scale(1.1);
+}
+
+.action-icon.delete:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  transform: scale(1.1);
+}
+
+.action-icon:active {
+  transform: scale(0.95);
+}
+
+/* ===================================
+   EMPTY STATE
+   =================================== */
+
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: #9ca3af;
+}
+
+.empty-state-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state-text {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+  font-family: inherit;
+}
+
+/* ===================================
+   PANEL CARD
+   =================================== */
+
+.panel-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 28px;
+  animation: slideIn 0.3s ease-out;
+  position: relative;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.panel-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.panel-header h2 i {
+  color: #667eea;
+  font-size: 20px;
+}
+
+/* ===================================
+   FORM STYLES
+   =================================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+  font-family: inherit;
+}
+
+.form-input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  background: white;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #1f2937;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+  background: #fafbff;
+}
+
+.form-actions {
+  display: flex;
+  width: 400px;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid #f3f4f6;
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  display: inline-block;
+  min-width: 100px;
+  font-family: inherit;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  margin-left: 4px;
+  animation: loading 1.4s infinite;
+}
+
+/* ===================================
+   UTILITIES
+   =================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.me-2 {
+  margin-right: 8px !important;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+    padding: 24px 20px;
+  }
+
+  .xarajat-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-add-modern {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .xarajat-container {
+    padding: 16px 12px;
+  }
+
+  .xarajat-header h1 {
+    font-size: 22px;
+  }
+
+  .table-card .table thead th {
+    padding: 12px 8px;
+    font-size: 11px;
+  }
+
+  .table-card .table tbody td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .action-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .panel-card {
+    padding: 20px 16px;
+  }
+
+  .panel-header h2 {
+    font-size: 16px;
+  }
+
+  .form-input {
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+
+  .form-actions {
+    gap: 8px;
+  }
+}

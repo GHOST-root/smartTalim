@@ -1,0 +1,96 @@
+/* =======================================
+   CUSTOM FORM ELEMENTLARI (Bootstrap-siz)
+======================================= */
+.custom-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.custom-form-scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 5px; /* Scrollbar uchun joy */
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.roww {
+  display: flex;
+  gap: 16px;
+}
+
+.roww .field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* O'chirish ogohlantirishi uchun maxsus quti */
+.delete-warning-box {
+  background-color: #fef2f2;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.modal-submit {
+    margin-top: 20px;
+  width: 100%;
+  height: 44px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.modal-submit:hover {
+  background-color: #2563eb;
+}
+
+.modal-submit.danger {
+  background-color: #ef4444;
+}
+
+.modal-submit.danger:hover {
+  background-color: #dc2626;
+}

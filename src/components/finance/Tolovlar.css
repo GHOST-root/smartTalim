@@ -1,0 +1,213 @@
+/* Tolovlar.css - simple styles inspired by screenshot */
+.tolovlar-page {
+  /* background: #f7f7f7; */
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* cards with left accent */
+.card-stat {
+  /* border: 1px solid rgba(0,0,0,0.04); */
+  position: relative;
+  overflow: visible;
+  margin-bottom: 16px;
+}
+.card-stat::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 12px;
+  bottom: 12px;
+  width: 6px;
+  background: #0aa5ff; /* blue accent */
+  border-radius: 6px;
+}
+.form-check-label{
+  margin-top: -5px;
+}
+
+/* icon on right */
+.icon-stack {
+  font-size: 28px;
+  opacity: 0.85;
+}
+
+/* filter card style */
+.filter-card {
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+/* chart card placeholder */
+.chart-card {
+  height: 200px;
+  border-radius: 8px;
+  /* border: 1px solid rgba(0,0,0,0.04); */
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.02);
+  background: #fff;
+}
+
+/* table style */
+.table > tbody > tr.table-active {
+  background: #fbfbfb;
+}
+
+/* small responsive adjustments */
+@media (min-width: 992px) {
+  .chart-card { height: 260px; }
+}
+.filter-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #c7c7c7;
+}
+
+.filter-card label {
+  font-size: 10px;
+  font-weight: 600;
+}
+.filter-btn {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  font-size: 14px;  
+  padding: 6px 12px;
+  border-radius: 6px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  width: 150px;
+  }
+
+.form-control,
+.form-select {
+  max-width: 200px;
+  height: 30px;
+  font-size: 14px;
+}
+.button {
+  font-size: 14px;  
+  padding: 8px 16px;
+  border-radius: 6px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*  */
+
+.filter-top{
+  display:flex;
+  justify-content:flex-end;
+  position:relative;
+  margin:20px 0 10px;
+}
+
+.gear-btn{
+  border:1px solid #d1d5db;
+  background:#fff;
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.gear-menu{
+  position:absolute;
+  top:40px;
+  right:0;
+  width:240px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  padding:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.chk{
+  display:flex;
+  gap:8px;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+/* GRID */
+.filter-wrapper{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:4px;
+}
+
+.f-item{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.f-item label{
+  font-size:12px;
+  color:#6b7280;
+}
+
+.f-item.wide{
+  min-width:100px;
+}
+
+.filter-wrapper input,
+.filter-wrapper select{
+  height:34px;
+  padding:0 10px;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.filter-wrapper input:focus,
+.filter-wrapper select:focus{
+  border-color:#3B82F6;
+  outline:none;
+}
+
+.filter-actions{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.filter-actions button{
+  height: 40px;
+}
+
+/*  */
+
+.profile-fullscreen {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  overflow: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(16px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.orovchi{
+  width: 70%;
+}
+
+.smtxt{
+  width: 100%;
+}
+.width{
+  width: 10px;
+}

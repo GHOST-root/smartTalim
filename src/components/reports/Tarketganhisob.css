@@ -1,0 +1,160 @@
+/* =======================================
+   TARK ETGANLAR HISOBOTI DIZAYNI
+======================================= */
+.tr-page-container {
+  padding: 16px 50px !important; 
+  background-color: #f8fafc;
+  height: 100vh; /* Ekran balandligi 100% */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Sahifa umuman skroll bo'lmasligi uchun */
+}
+
+/* Sarlavha qismi */
+.tr-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px; 
+  flex-shrink: 0; /* Siqilib ketmaydi */
+}
+
+.tr-report-title {
+  margin: 0 !important;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Miqdor ko'rsatkichi (Badge) */
+.tr-badge {
+  border: 1px solid #f97316;
+  color: #ea580c;
+  background-color: #fff7ed;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 🌟 FILTRLAR QATORI 🌟 */
+.tr-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 16px; 
+  flex-shrink: 0; /* Filtrlar siqilib ketmaydi */
+}
+
+.tr-filter-input {
+  height: 40px !important;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #334155;
+  background-color: #fff;
+  outline: none;
+  flex: 1;
+  min-width: 120px;
+  transition: border-color 0.2s;
+}
+
+.tr-filter-input:focus {
+  border-color: #0ea5e9;
+}
+
+/* Tugmalar */
+.tr-filter-btn {
+  height: 40px;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tr-filter-btn:hover {
+  background-color: #2563eb;
+}
+
+.tr-reset-btn {
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tr-reset-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 🌟 CHARTS (GRAFIKLAR) GRID - ASOSIY MUAMMO SHU YERDA HAL BO'LDI 🌟 */
+.tr-chart-grid {
+  display: grid;
+  /* minmax(0, 1fr) yordamida elementlar ekranga qarab 100% kichrayishiga ruxsat beramiz */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  flex: 1; /* Qolgan hamma bo'sh joyni egallaydi */
+  min-height: 0; /* O'ta muhim: Grid qutisi o'zidan kichrayishiga yo'l qo'yish */
+}
+
+.tr-chart-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* O'ta muhim: Oq quti ham ichkariga qarab kichraya olishi kerak */
+}
+
+.tr-chart-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+  flex-shrink: 0; 
+}
+
+/* Grafik uchun asosiy idish */
+.tr-chart-box {
+  flex: 1;
+  position: relative; /* Chart.js ga aynan shu kerak */
+  min-height: 0; /* Chart o'zini qisqartira olishi uchun ruxsat beramiz */
+  height: 100%;
+  width: 100%;
+}
+
+.tr-empty-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 14px;
+}
